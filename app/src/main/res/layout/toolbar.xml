@@ -1,0 +1,29 @@
+<!-- res/layout/toolbar_custom.xml -->
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:gravity="center"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme">
+
+    <ImageButton
+        android:id="@+id/toolbar_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:backgroundTint="@color/md_theme_primary"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:tint="@color/md_theme_primaryContainer" />
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/default_title"
+        android:textColor="@color/md_theme_primaryContainer"
+        android:textSize="20sp" />
+</androidx.appcompat.widget.Toolbar>

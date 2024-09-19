@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/setupLoginFragment">
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.abschlussprojekt.ui.main.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_partnerFragment"
+            app:destination="@id/settingsPartnerFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_eventFragment"
+            app:destination="@id/settingsEventFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_reminderFragment"
+            app:destination="@id/settingsReminderFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_profileFragment"
+            app:destination="@id/settingsProfileFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_recsFragment"
+            app:destination="@id/settingsRecsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_self"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_setupLoginFragment"
+            app:destination="@id/setupLoginFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEventFragment"
+        android:name="com.example.abschlussprojekt.ui.addedit.AddEventFragment"
+        android:label="fragment_add_event"
+        tools:layout="@layout/fragment_add_event">
+        <action
+            android:id="@+id/action_addEventFragment_to_addPartnerFragment"
+            app:destination="@id/addPartnerFragment" />
+        <action
+            android:id="@+id/action_addEventFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPartnerFragment"
+        android:name="com.example.abschlussprojekt.ui.addedit.AddPartnerFragment"
+        android:label="fragment_add_partner"
+        tools:layout="@layout/fragment_add_partner">
+        <action
+            android:id="@+id/action_addPartnerFragment_to_addProfileFragment"
+            app:destination="@id/addProfileFragment" />
+        <action
+            android:id="@+id/action_addPartnerFragment_to_addEventFragment"
+            app:destination="@id/addEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editEventFragment"
+        android:name="com.example.abschlussprojekt.ui.addedit.EditEventFragment"
+        android:label="fragment_edit_event"
+        tools:layout="@layout/fragment_edit_event">
+        <action
+            android:id="@+id/action_editEventFragment_to_settingsEventFragment"
+            app:destination="@id/settingsEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPartnerFragment"
+        android:name="com.example.abschlussprojekt.ui.addedit.EditPartnerFragment"
+        android:label="fragment_edit_partner"
+        tools:layout="@layout/fragment_edit_partner">
+        <action
+            android:id="@+id/action_editPartnerFragment_to_settingsPartnerFragment"
+            app:destination="@id/settingsPartnerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.abschlussprojekt.ui.addedit.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_editProfileFragment_to_settingsProfileFragment"
+            app:destination="@id/settingsProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.abschlussprojekt.ui.main.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_recommendationsOverviewFragment"
+            app:destination="@id/recommendationsOverviewFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_setupLoginFragment"
+            app:destination="@id/setupLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendationDetailFragment"
+        android:name="com.example.abschlussprojekt.ui.recs.RecommendationDetailFragment"
+        tools:layout="@layout/fragment_recommendation_detail">
+
+        <argument
+            android:name="placestype"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="recstype"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendationsCategoryFragment"
+        android:name="com.example.abschlussprojekt.ui.recs.RecommendationsCategoryFragment"
+        android:label="fragment_recommendations_category"
+        tools:layout="@layout/fragment_recommendations_category">
+        <action
+            android:id="@+id/action_recommendationsCategoryFragment_to_recommendationDetailFragment"
+            app:destination="@id/recommendationDetailFragment" />
+        <action
+            android:id="@+id/action_recommendationsCategoryFragment_to_recommendationDetailFragment2"
+            app:destination="@id/recommendationDetailFragment" />
+        <argument
+            android:name="buttonType"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendationsOverviewFragment"
+        android:name="com.example.abschlussprojekt.ui.main.RecommendationsFragment"
+        android:label="fragment_recommendations_overview"
+        tools:layout="@layout/fragment_recommendations">
+        <action
+            android:id="@+id/action_recommendationsOverviewFragment_to_recommendationsCategoryFragment"
+            app:destination="@id/recommendationsCategoryFragment" />
+        <action
+            android:id="@+id/action_recommendationsOverviewFragment_to_recommendationDetailFragment"
+            app:destination="@id/recommendationDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsEventFragment"
+        android:name="com.example.abschlussprojekt.ui.settings.SettingsEventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_settings_event">
+        <action
+            android:id="@+id/action_eventFragment_to_editEventFragment"
+            app:destination="@id/editEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsPartnerFragment"
+        android:name="com.example.abschlussprojekt.ui.settings.SettingsPartnerFragment"
+        android:label="fragment_partner"
+        tools:layout="@layout/fragment_settings_partner">
+        <action
+            android:id="@+id/action_partnerFragment_to_editPartnerFragment"
+            app:destination="@id/editPartnerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsProfileFragment"
+        android:name="com.example.abschlussprojekt.ui.settings.SettingsProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_settings_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsRecsFragment"
+        android:name="com.example.abschlussprojekt.ui.settings.SettingsRecsFragment"
+        android:label="fragment_recs"
+        tools:layout="@layout/fragment_settings_recs" />
+    <fragment
+        android:id="@+id/settingsReminderFragment"
+        android:name="com.example.abschlussprojekt.ui.settings.SettingsReminderFragment"
+        android:label="fragment_reminder"
+        tools:layout="@layout/fragment_settings_reminder">
+        <action
+            android:id="@+id/action_settingsReminderFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProfileFragment"
+        android:name="com.example.abschlussprojekt.ui.addedit.AddProfileFragment"
+        android:label="fragment_add_profile"
+        tools:layout="@layout/fragment_add_profile">
+        <action
+            android:id="@+id/action_addProfileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_addProfileFragment_to_addPartnerFragment"
+            app:destination="@id/addPartnerFragment" />
+        <action
+            android:id="@+id/action_addProfileFragment_to_setupRegisterFragment"
+            app:destination="@id/setupRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupRegisterFragment"
+        android:name="com.example.abschlussprojekt.ui.setup.SetupRegisterFragment"
+        android:label="fragment_setup_register"
+        tools:layout="@layout/fragment_setup_register">
+        <action
+            android:id="@+id/action_setupRegisterFragment_to_addProfileFragment3"
+            app:destination="@id/addProfileFragment" />
+        <action
+            android:id="@+id/action_setupRegisterFragment_to_setupLoginFragment"
+            app:destination="@id/setupLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupLoginFragment"
+        android:name="com.example.abschlussprojekt.ui.setup.SetupLoginFragment"
+        android:label="fragment_setup_login"
+        tools:layout="@layout/fragment_setup_login">
+        <action
+            android:id="@+id/action_setupLoginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_setupLoginFragment_to_setupRegisterFragment2"
+            app:destination="@id/setupRegisterFragment" />
+    </fragment>
+</navigation>

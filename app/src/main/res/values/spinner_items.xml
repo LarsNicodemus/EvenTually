@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_items_gender">
+        <item>Mann</item>
+        <item>Frau</item>
+        <item>Divers</item>
+    </string-array>
+
+    <string-array name="spinner_items_partner">
+
+    </string-array>
+
+    <string-array name="spinner_likes">
+
+    </string-array>
+
+    <string-array name="spinner_dislikes">
+
+    </string-array>
+
+    <string-array name="spinner_interest">
+
+    </string-array>
+
+    <string-array name="spinner_foodpreferences">
+
+    </string-array>
+
+    <string-array name="spinner_activitypreferences">
+
+    </string-array>
+</resources>
