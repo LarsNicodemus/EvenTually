@@ -22,7 +22,7 @@ class FirebaseRepository {
 
     var profileRef: DocumentReference? = null
     var partnerRef: DocumentReference? = null
-    private var eventRef: DocumentReference? = null
+    var eventRef: DocumentReference? = null
     var reminderRef: DocumentReference? = null
     var darkModeRef: DocumentReference? = null
     var recsRef: DocumentReference? = null
@@ -413,9 +413,13 @@ class FirebaseRepository {
     fun setDarkMode(isEnabled: Boolean) {
         if (isEnabled) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            print("DARKMODE")
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            print("NO DARKMODE")
         }
+        val darkMode = GlobalDarkMode(darkModeActivated = isEnabled)
+        firebaseUpdateDarkMode(darkMode)
     }
 
     private fun firebaseSetUpRecsEnv() {
